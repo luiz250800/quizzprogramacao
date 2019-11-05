@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/mask.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <br>
+    <div class="container col-md-10 border border-black" style="text-align: center">
+        <div>
+            <br>
+            <div id="perguntas">
+                <h2>Para que você quer aprender programação?</h2>
+            </div>
+            <div id="subtitulo">
+                <h3></h3>
+            </div>
+
+            <br>
+            <br>
+            <div id="resposta1">
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pmf')" class="btn btn-primary btn-lg btn-block">Para meus
+                        filhos</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('ns')" class="btn btn-primary btn-lg btn-block">Não sei,
+                        apenas escolha uma para mim</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd')" class="btn btn-primary btn-lg btn-block">Por
+                        diversão</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('gd')" class="btn btn-primary btn-lg btn-block">Ganhar
+                        dinheiro</button>
+                </div>
+            </div>
+            <div id="gd" style="display: none;">
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('gd_startup')"
+                        class="btn btn-primary btn-lg btn-block">Tenho ideia para uma startup</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('gd_emprego')"
+                        class="btn btn-primary btn-lg btn-block">Pretendo conseguir um emprego</button>
+                </div>
+            </div>
+
+            <div id="gd_emprego_plataformaarea" style="display: none;">
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_sim_plataformaarea_web')"
+                        class="btn btn-primary btn-lg btn-block">Web</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_sim_plataformaarea_jogos')"
+                        class="btn btn-primary btn-lg btn-block">Jogos</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_sim_plataformaarea_mobile')"
+                        class="btn btn-primary btn-lg btn-block">Mobile</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('gd_emprego_plataformaarea_grandesempresas')"
+                        class="btn btn-primary btn-lg btn-block">Quero trabalhar para grandes empresas de tecnologica</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('gd_emprego_plataformaarea_tantofaz')"
+                        class="btn btn-primary btn-lg btn-block">Tanto faz, só quero $$$</button>
+                </div>
+            </div>
+
+            <div id="gd_emprego_plataformaarea_grandesempresas" style="display: none;">
+                    <h2><img src="../img/facebook.png" width="20%" class="img-thumbnail">-><img src="../img/python.png" width="20%" class="img-thumbnail"> ou <img src="../img/react.png" width="20%" class="img-thumbnail"></h2>
+                    <h2><img src="../img/microsoft.jpg" width="20%" class="img-thumbnail">-><img src="../img/csharp.png" width="20%" class="img-thumbnail"></h2>
+                    <h2><img src="../img/google.jpg" width="20%" class="img-thumbnail">-><img src="../img/python.png" width="20%" class="img-thumbnail"></h2>
+                    <h2><img src="../img/apple.jpg" width="20%" class="img-thumbnail">-><img src="../img/objectivec.png" width="20%" class="img-thumbnail"></h2>
+            </div>
+
+            <div id="gd_emprego_plataformaarea_tantofaz" style="display: none;">
+                    <img src="../img/java.jpg" width="50%" class="img-thumbnail">
+            </div>
+
+            <div id="pmf" style="display: none;">
+                <img src="../img/scratch.png" width="30%" class="img-thumbnail">
+                <img src="../img/python.png" width="30%" class="img-thumbnail">
+            </div>
+
+            <div id="ns" style="display: none;">
+                <img src="../img/python.png" width="50%" class="img-thumbnail">
+            </div>
+
+            <div id="pd" style="display: none;">
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_sim')"
+                        class="btn btn-primary btn-lg btn-block">Sim</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_nsoquerocomecar')"
+                        class="btn btn-primary btn-lg btn-block">Não, só quero começar logo</button>
+                </div>
+            </div>
+
+            <div id="pd_sim_plataformaarea" style="display: none;">
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_sim_plataformaarea_web')"
+                        class="btn btn-primary btn-lg btn-block">Web</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_sim_plataformaarea_jogos')"
+                        class="btn btn-primary btn-lg btn-block">Jogos</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_sim_plataformaarea_mobile')"
+                        class="btn btn-primary btn-lg btn-block">Mobile</button>
+                </div>
+            </div>
+            <div id="pd_sim_plataformaarea_web" style="display: none;">
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_sim_plataformaarea_web_sim')"
+                        class="btn btn-primary btn-lg btn-block">Sim</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_sim_plataformaarea_web_nao')"
+                        class="btn btn-primary btn-lg btn-block">Não</button>
+                </div>
+            </div>
+            <div id="pd_sim_plataformaarea_web_sim" style="display: none;">
+                <img src="../img/javascript.png" width="50%" class="img-thumbnail">
+            </div>
+            <div id="pd_sim_plataformaarea_web_nao" style="display: none;">
+                <img src="../img/php.png" width="50%" class="img-thumbnail">
+            </div>
+
+            <div id="pd_sim_plataformaarea_jogos" style="display: none;">
+                <img src="../img/c++.png" width="50%" class="img-thumbnail">
+            </div>
+
+            <div id="pd_sim_plataformaarea_mobile" style="display: none;">
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_sim_plataformaarea_mobile_android')"
+                        class="btn btn-primary btn-lg btn-block">Android</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_sim_plataformaarea_mobile_ios')"
+                        class="btn btn-primary btn-lg btn-block">IOS</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_sim_plataformaarea_mobile_ambos')"
+                        class="btn btn-primary btn-lg btn-block">Ambos</button>
+                </div>
+            </div>
+
+            <div id="pd_sim_plataformaarea_mobile_android" style="display: none;">
+                <img src="../img/java.jpg" width="50%" class="img-thumbnail">
+            </div>
+            <div id="pd_sim_plataformaarea_mobile_ios" style="display: none;">
+                <img src="../img/objectivec.png" width="50%" class="img-thumbnail">
+            </div>
+            <div id="pd_sim_plataformaarea_mobile_ambos" style="display: none;">
+                <img src="../img/reactnative.png" width="40%" class="img-thumbnail">
+                <img src="../img/ionic.png" width="40%" class="img-thumbnail">
+            </div>
+
+            <div id="pd_nsoquerocomecar" style="display: none;">
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_nsoquerocomecar_maisfacil')"
+                        class="btn btn-primary btn-lg btn-block">Mais fácil</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_nsoquerocomecar_maisdificil')"
+                        class="btn btn-primary btn-lg btn-block">Um pouco difícil</button>
+                </div>
+            </div>
+
+            <div id="pd_nsoquerocomecar_maisfacil" style="display: none;">
+                <img src="../img/python.png" width="50%" class="img-thumbnail">
+            </div>
+
+            <div id="pd_nsoquerocomecar_maisdificil" style="display: none;">
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_nsoquerocomecar_maisfacil_automatico')"
+                        class="btn btn-primary btn-lg btn-block">Automático</button>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="button" onclick="pergunta1('pd_nsoquerocomecar_maisdificil_manual')"
+                        class="btn btn-primary btn-lg btn-block">Manual</button>
+                </div>
+            </div>
+
+            <div id="pd_nsoquerocomecar_maisfacil_automatico" style="display: none;">
+                <img src="../img/java.jpg" width="50%" class="img-thumbnail">
+            </div>
+            <div id="pd_nsoquerocomecar_maisdificil_manual" style="display: none;">
+                <img src="../img/c.jpg" width="50%" class="img-thumbnail">
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+    &nbsp<button type="button" class="btn btn-primary btn-lg"
+        onclick="window.location.href = 'index.html'">Voltar</button>
+</body>
+<script src="../js/script.js"></script>
+
+</html>
